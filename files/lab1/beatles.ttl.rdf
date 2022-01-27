@@ -1,0 +1,36 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://stardog.com/tutorial/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <Album rdf:about="http://stardog.com/tutorial/Please_Please_Me">
+    <date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >1963-03-22</date>
+    <name>Please Please Me</name>
+    <artist>
+      <Band rdf:about="http://stardog.com/tutorial/The_Beatles">
+        <member>
+          <SoloArtist rdf:about="http://stardog.com/tutorial/Ringo_Starr"/>
+        </member>
+        <member>
+          <SoloArtist rdf:about="http://stardog.com/tutorial/George_Harrison"/>
+        </member>
+        <member>
+          <SoloArtist rdf:about="http://stardog.com/tutorial/John_Lennon"/>
+        </member>
+        <member>
+          <SoloArtist rdf:about="http://stardog.com/tutorial/Paul_McCartney"/>
+        </member>
+        <name>The Beatles</name>
+      </Band>
+    </artist>
+    <track>
+      <Song rdf:about="http://stardog.com/tutorial/Love_Me_Do">
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >125</length>
+        <name>Love Me Do</name>
+        <writer rdf:resource="http://stardog.com/tutorial/John_Lennon"/>
+        <writer rdf:resource="http://stardog.com/tutorial/Paul_McCartney"/>
+      </Song>
+    </track>
+  </Album>
+</rdf:RDF>
