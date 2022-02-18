@@ -10,13 +10,14 @@ import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.riot.RDFDataMgr;
+import org.apache.jena.riot.RDFLanguages;
 
 
 public class QueryLocalRDFGraph_NobelPrize {
 	
 	public QueryLocalRDFGraph_NobelPrize(String file) {
 	
-		Dataset dataset = RDFDataMgr.loadDataset(file);
+		Dataset dataset = RDFDataMgr.loadDataset(file, RDFLanguages.NT);
 		Model model = dataset.getDefaultModel();
 		
 		
