@@ -1,0 +1,31 @@
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix dbp:   <http://dbpedia.org/property/> .
+@prefix city:  <http://www.example.org/university/london/city#> .
+@prefix dbr:   <http://dbpedia.org/resource/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+city:ernesto  a          foaf:Person ;
+        dbo:birthPlace   dbr:Castellón_de_la_Plana ;
+        dbo:nationality  dbr:Spain ;
+        dbp:employer     <http://dbpedia.org/resource/City,_University_of_London> ;
+        city:speaks      dbr:Spanish_language , dbr:English_language , dbr:Italian_language ;
+        city:teaches     city:inm713 ;
+        foaf:familyName  "Jimenez Ruiz" ;
+        foaf:givenName   "Ernesto" .
+
+[ a              rdf:Statement ;
+  rdf:object     city:inm713 ;
+  rdf:predicate  city:teaches ;
+  rdf:subject    city:ernesto ;
+  dbo:year       "2021"^^<http://www.w3.org/2001/XMLSchema#gYear>
+] .
+
+[ a              rdf:Statement ;
+  rdf:object     <http://dbpedia.org/resource/City,_University_of_London> ;
+  rdf:predicate  dbp:employer ;
+  rdf:subject    city:ernesto ;
+  dbo:startDate  "2019-09-23T00:00:00"^^<http://www.w3.org/2001/XMLSchema#gYear>
+] .
+
+city:inm713  a  city:Module .

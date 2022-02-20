@@ -41,7 +41,7 @@ public class CreateTriples {
 		
 		String city_ns = "http://www.example.org/university/london/city#";
 		String foaf_ns = "http://xmlns.com/foaf/0.1/";
-		String dbpo_ns = "https://dbpedia.org/ontology/";
+		String dbpo_ns = "http://dbpedia.org/ontology/";
 		
 		// create the resources
 		Resource ernesto = model.createResource(city_ns+"ernesto");

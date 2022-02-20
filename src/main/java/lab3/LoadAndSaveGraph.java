@@ -60,7 +60,8 @@ public class LoadAndSaveGraph {
 	public static void main(String[] args) {
 		try {
 			//new LoadAndSaveGraph("files/lab3/beatles.ttl", "files/lab3/beatles.rdf", RDFFormat.RDFXML); 
-			new LoadAndSaveGraph("files/lab3/ernesto_foaf.rdf", "files/lab3/ernesto_foaf.ttl", RDFFormat.TURTLE); 
+			new LoadAndSaveGraph("files/lab3/ernesto_foaf.rdf", "files/lab3/ernesto_foaf.ttl", RDFFormat.TURTLE);
+			new LoadAndSaveGraph("files/lab3/solution/Solution_Task3.1.ttl", "files/lab3/solution/Solution_Task3.1.rdf", RDFFormat.RDFXML);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

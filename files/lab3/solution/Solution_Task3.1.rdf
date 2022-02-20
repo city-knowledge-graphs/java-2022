@@ -1,0 +1,30 @@
+<rdf:RDF
+    xmlns:dbr="https://dbpedia.org/resource/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:city="http://www.example.org/university/london/city#"
+    xmlns:dbo="https://dbpedia.org/ontology/"
+    xmlns:dbp="https://dbpedia.org/property/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Statement>
+    <dbo:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2019-09-23T00:00:00</dbo:startDate>
+    <rdf:predicate rdf:resource="https://dbpedia.org/property/employer"/>
+    <rdf:subject>
+      <foaf:Person rdf:about="http://www.example.org/university/london/city#ernesto">
+        <dbo:nationality rdf:resource="https://dbpedia.org/resource/Spain"/>
+        <dbp:employer rdf:resource="https://dbpedia.org/resource/City,_University_of_London"/>
+        <dbo:birthPlace rdf:resource="https://dbpedia.org/resource/Castellón_de_la_Plana"/>
+        <city:speaks rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://dbpedia.org/resource/Spanish_language"/>
+          <rdf:Description rdf:about="https://dbpedia.org/resource/Italian_language"/>
+          <rdf:Description rdf:about="https://dbpedia.org/resource/English_language"/>
+        </city:speaks>
+        <foaf:givenname>Ernesto</foaf:givenname>
+        <foaf:family_name>Jiménez-Ruiz</foaf:family_name>
+      </foaf:Person>
+    </rdf:subject>
+    <rdf:object rdf:resource="https://dbpedia.org/resource/City,_University_of_London"/>
+  </rdf:Statement>
+</rdf:RDF>
