@@ -33,20 +33,23 @@ public class Solution_Task3_4 {
 		// create an empty Model
 		Model model = ModelFactory.createDefaultModel();
 		
-		//Set prefixes
-		model.setNsPrefix("city", "http://www.example.org/university/london/city#");
-		model.setNsPrefix("foaf", "http://xmlns.com/foaf/0.1/");
-		model.setNsPrefix("dbo", "http://dbpedia.org/ontology/");
-		model.setNsPrefix("dbr", "http://dbpedia.org/resource/");
-		model.setNsPrefix("dbp", "http://dbpedia.org/property/");
-		model.setNsPrefix("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
-		
-		
+		//This namepace is created as example for the lab
 		String city_ns = "http://www.example.org/university/london/city#";
+		
+		//These namespaces exist within the FOAF vocabulary and DBPedia KG
 		String foaf_ns = "http://xmlns.com/foaf/0.1/";
 		String dbo_ns = "http://dbpedia.org/ontology/";
 		String dbr_ns = "http://dbpedia.org/resource/";
 		String dbp_ns = "http://dbpedia.org/property/";
+		
+		//Set prefixes
+		model.setNsPrefix("city", city_ns);
+		model.setNsPrefix("foaf", foaf_ns);
+		model.setNsPrefix("dbo", dbo_ns);
+		model.setNsPrefix("dbr", dbr_ns);
+		model.setNsPrefix("dbp", dbp_ns);
+		model.setNsPrefix("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
+		
 		
 		// create the resources
 		Resource ernesto = model.createResource(city_ns+"ernesto");
