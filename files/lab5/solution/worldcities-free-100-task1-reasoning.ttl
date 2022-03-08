@@ -1,0 +1,2488 @@
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix lab5:  <http://www.semanticweb.org/ernesto/in3067-inm713/lab5/> .
+
+<http://www.w3.org/2000/01/rdf-schema#domain>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2000/01/rdf-schema#domain> .
+
+<http://www.w3.org/2002/07/owl#DatatypeProperty>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+
+lab5:CapitalCity  a  <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "primary - country's capital (e.g. Washington D.C.)" ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:CapitalCity , _:b0 , <http://dbpedia.org/ontology/City> , _:b1 ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                lab5:CapitalCity .
+
+<http://www.w3.org/2002/07/owl#Property>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Property> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                <http://www.w3.org/2002/07/owl#Property> .
+
+lab5:AdminCapitalCity
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                lab5:AdminCapitalCity .
+
+<http://www.w3.org/2002/07/owl#imports>
+        a       <http://www.w3.org/2002/07/owl#OntologyProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2002/07/owl#imports> .
+
+lab5:isFirstLevelAdminCapitalOf
+        a       <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Thing> , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 , lab5:AdminCapitalCity , _:b2 ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:isLocatedIn , lab5:cityIsLocatedIn , lab5:isAdminCapitalOf , lab5:isFirstLevelAdminCapitalOf .
+
+xsd:negativeInteger  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<http://www.w3.org/2002/07/owl#ObjectProperty>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+
+<http://www.w3.org/2002/07/owl#intersectionOf>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2002/07/owl#intersectionOf> .
+
+<http://www.w3.org/2000/01/rdf-schema#comment>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2000/01/rdf-schema#comment> .
+
+<http://www.w3.org/2002/07/owl#backwardCompatibleWith>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2002/07/owl#backwardCompatibleWith> .
+
+<http://www.w3.org/2002/07/owl#Ontology>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Ontology> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                <http://www.w3.org/2002/07/owl#Ontology> .
+
+xsd:unsignedLong  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                xsd:unsignedLong , xsd:integer , xsd:long , xsd:nonNegativeInteger ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                xsd:unsignedLong .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#first>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> .
+
+<http://www.w3.org/2002/07/owl#onProperty>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2002/07/owl#onProperty> .
+
+<http://www.w3.org/2002/07/owl#differentFrom>
+        a       <http://www.w3.org/2002/07/owl#SymmetricProperty> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2002/07/owl#differentFrom> .
+
+_:b2    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                _:b2 ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                lab5:isFirstLevelAdminCapitalOf ;
+        <http://www.w3.org/2002/07/owl#someValuesFrom>
+                <http://dbpedia.org/ontology/Country> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#object>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> .
+
+<http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> .
+
+<http://www.w3.org/2002/07/owl#disjointWith>
+        a       <http://www.w3.org/2002/07/owl#SymmetricProperty> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2002/07/owl#disjointWith> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt>
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Container> .
+
+lab5:isAdminCapitalOf
+        a       <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:isLocatedIn , lab5:cityIsLocatedIn , lab5:isAdminCapitalOf ;
+        <http://www.w3.org/2002/07/owl#inverseOf>
+                lab5:hasAdminCapital .
+
+<http://www.w3.org/2002/07/owl#Class>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                <http://www.w3.org/2002/07/owl#Class> .
+
+xsd:duration  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
+
+_:b0    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , <http://www.w3.org/2002/07/owl#Thing> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                _:b0 ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                lab5:isCapitalOf ;
+        <http://www.w3.org/2002/07/owl#someValuesFrom>
+                <http://dbpedia.org/ontology/Country> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#List>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+
+_:b1    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                _:b1 ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                lab5:cityIsLocatedIn ;
+        <http://www.w3.org/2002/07/owl#someValuesFrom>
+                <http://dbpedia.org/ontology/Country> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Container> .
+
+xsd:double  a   <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+xsd:gMonth  a   <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://www.w3.org/2002/07/owl#FunctionalProperty>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+
+xsd:unsignedByte  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                xsd:unsignedLong , xsd:unsignedInt , xsd:int , xsd:integer , xsd:long , xsd:byte , xsd:short , xsd:unsignedByte , xsd:nonNegativeInteger , xsd:unsignedShort ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                xsd:unsignedByte .
+
+_:b4    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , <http://www.w3.org/2002/07/owl#Thing> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                _:b4 ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                lab5:isSecondLevelAdminCapitalOf ;
+        <http://www.w3.org/2002/07/owl#someValuesFrom>
+                <http://dbpedia.org/ontology/Country> .
+
+<http://www.w3.org/2002/07/owl#SymmetricProperty>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#ObjectProperty> .
+
+lab5:SecondLevelAdminCapitalCity
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "minor - lower-level admin capital (e.g. Fayetteville, AR)" ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , _:b4 , _:b1 , <http://dbpedia.org/ontology/City> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                lab5:SecondLevelAdminCapitalCity .
+
+lab5:longitude  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "long" ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                xsd:float , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:longitude .
+
+xsd:gMonthDay  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty>
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+
+<http://www.w3.org/2002/07/owl#inverseOf>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2002/07/owl#inverseOf> .
+
+<http://dbpedia.org/ontology/capital>
+        a       <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#Property> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has capital" ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Thing> , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , <http://dbpedia.org/ontology/City> , _:b1 ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:hasCity , <http://dbpedia.org/ontology/capital> ;
+        <http://www.w3.org/2002/07/owl#inverseOf>
+                lab5:isCapitalOf .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+
+xsd:nonNegativeInteger
+        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                xsd:integer , xsd:nonNegativeInteger ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                xsd:nonNegativeInteger .
+
+<http://www.w3.org/2002/07/owl#sameAs>
+        a       <http://www.w3.org/2002/07/owl#SymmetricProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2002/07/owl#sameAs> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral>
+        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://dbpedia.org/ontology/populationTotal>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "population of a city" ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                xsd:long , <http://www.w3.org/2000/01/rdf-schema#Resource> , xsd:integer , xsd:decimal ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://dbpedia.org/ontology/populationTotal> .
+
+xsd:unsignedShort  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                xsd:unsignedLong , xsd:unsignedInt , xsd:int , xsd:integer , xsd:long , xsd:short , xsd:nonNegativeInteger , xsd:unsignedShort ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                xsd:unsignedShort .
+
+xsd:gDay  a     <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://www.w3.org/2000/01/rdf-schema#range>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2000/01/rdf-schema#range> .
+
+lab5:hasCity  a  <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:hasCity ;
+        <http://www.w3.org/2002/07/owl#inverseOf>
+                lab5:cityIsLocatedIn .
+
+<http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2000/01/rdf-schema#seeAlso> , <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> .
+
+xsd:boolean  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:nonPositiveInteger .
+
+<http://www.w3.org/2002/07/owl#Nothing>
+        a       <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Nothing> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                <http://www.w3.org/2002/07/owl#Nothing> .
+
+<http://www.w3.org/2002/07/owl#InverseFunctionalProperty>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#ObjectProperty> .
+
+xsd:hexBinary  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<http://purl.org/dc/elements/1.1/creator>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#AnnotationProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/creator> .
+
+<http://www.w3.org/2002/07/owl#oneOf>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2002/07/owl#oneOf> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Container> .
+
+xsd:decimal  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean .
+
+<http://dbpedia.org/ontology/Country>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Country"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/Country> , _:b3 ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                <http://dbpedia.org/ontology/Country> .
+
+<http://www.w3.org/2000/01/rdf-schema#label>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2000/01/rdf-schema#label> .
+
+lab5:cityIsLocatedIn  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:isLocatedIn , lab5:cityIsLocatedIn ;
+        <http://www.w3.org/2002/07/owl#inverseOf>
+                lab5:hasCity .
+
+xsd:dateTime  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
+
+xsd:date  a     <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
+
+xsd:int  a      <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                xsd:int , xsd:integer , xsd:long ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                xsd:int .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> .
+
+xsd:gYear  a    <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+lab5:population  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:population .
+
+<http://dbpedia.org/ontology/City>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "City"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                <http://dbpedia.org/ontology/City> .
+
+<http://www.w3.org/2002/07/owl#Thing>
+        a       <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://www.w3.org/2002/07/owl#incompatibleWith>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2002/07/owl#incompatibleWith> .
+
+<http://www.w3.org/2002/07/owl#someValuesFrom>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2002/07/owl#someValuesFrom> .
+
+<http://www.w3.org/2002/07/owl#OntologyProperty>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+
+<http://www.w3.org/2002/07/owl#priorVersion>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2002/07/owl#priorVersion> .
+
+<http://www.w3.org/2000/01/rdf-schema#subClassOf>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2000/01/rdf-schema#subClassOf> .
+
+<http://www.w3.org/2000/01/rdf-schema#Resource>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+lab5:isLocatedIn  a  <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:isLocatedIn .
+
+lab5:FirstLevelAdminCapitalCity
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "admin - first-level admin capital (e.g. Little Rock, AR)" ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , lab5:AdminCapitalCity , _:b1 , <http://dbpedia.org/ontology/City> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                lab5:FirstLevelAdminCapitalCity .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> .
+
+<http://www.w3.org/2002/07/owl#TransitiveProperty>
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#ObjectProperty> .
+
+<http://www.w3.org/2002/07/owl#equivalentClass>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2002/07/owl#equivalentClass> .
+
+xsd:short  a    <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                xsd:int , xsd:integer , xsd:long , xsd:short ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                xsd:short .
+
+lab5:hasAdminCapital  a  <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:hasCity , lab5:hasAdminCapital ;
+        <http://www.w3.org/2002/07/owl#inverseOf>
+                lab5:isAdminCapitalOf .
+
+_:b3    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 , <http://www.w3.org/2002/07/owl#Thing> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                _:b3 ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dbpedia.org/ontology/capital> ;
+        <http://www.w3.org/2002/07/owl#someValuesFrom>
+                <http://dbpedia.org/ontology/City> .
+
+lab5:isCapitalOf  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Thing> , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 , _:b0 ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:isLocatedIn , lab5:cityIsLocatedIn , lab5:isCapitalOf ;
+        <http://www.w3.org/2002/07/owl#inverseOf>
+                <http://dbpedia.org/ontology/capital> .
+
+xsd:positiveInteger  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> .
+
+<http://www.w3.org/2000/01/rdf-schema#Class>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+lab5:latitude  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "lat" ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                xsd:float , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:latitude .
+
+lab5:name  a    <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                xsd:string , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                lab5:admin_name ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:name .
+
+<http://www.w3.org/2002/07/owl#versionInfo>
+        a       <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+<http://www.w3.org/2000/01/rdf-schema#Datatype>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+xsd:anyURI  a   <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+lab5:iso2code  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "ISO 3166-1 code with 2 characters: https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                xsd:string , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:iso2code .
+
+xsd:long  a     <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , xsd:long , xsd:integer ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                xsd:long .
+
+xsd:base64Binary  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+lab5:admin_name  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Administrative name of a city" ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                xsd:string , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:admin_name .
+
+lab5:name_ascii  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Name using only ascii characters" ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                xsd:string , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:name_ascii .
+
+xsd:unsignedInt  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                xsd:unsignedLong , xsd:unsignedInt , xsd:int , xsd:integer , xsd:long , xsd:nonNegativeInteger ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                xsd:unsignedInt .
+
+lab5:iso3code  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "ISO 3166-1 code with 3 characters: https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                xsd:string , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:iso3code .
+
+<http://www.w3.org/2000/01/rdf-schema#seeAlso>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+
+lab5:isSecondLevelAdminCapitalOf
+        a       <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2002/07/owl#Thing> , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 , lab5:AdminCapitalCity , _:b4 ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                lab5:isLocatedIn , lab5:cityIsLocatedIn , lab5:isAdminCapitalOf , lab5:isSecondLevelAdminCapitalOf .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#subject>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> .
+
+xsd:byte  a     <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                xsd:int , xsd:integer , xsd:long , xsd:byte , xsd:short ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                xsd:byte .
+
+xsd:integer  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                xsd:decimal , xsd:integer ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                xsd:integer .
+
+xsd:time  a     <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:long , xsd:byte , xsd:unsignedShort , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
+
+<http://www.w3.org/2000/01/rdf-schema#Literal>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> .
+
+xsd:float  a    <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , xsd:float ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                xsd:float .
+
+<http://www.w3.org/2002/07/owl#Restriction>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                <http://www.w3.org/2002/07/owl#Restriction> .
+
+xsd:nonPositiveInteger
+        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean .
+
+xsd:gYearMonth  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+xsd:string  a   <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , xsd:string ;
+        <http://www.w3.org/2002/07/owl#disjointWith>
+                xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                xsd:string .
+
+lab5:mexico_city  a           lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Ciudad de México" ;
+        lab5:cityIsLocatedIn  lab5:mexico ;
+        lab5:isCapitalOf      lab5:mexico ;
+        lab5:isLocatedIn      lab5:mexico ;
+        lab5:latitude         "19.4333"^^xsd:float ;
+        lab5:longitude        "-99.1333"^^xsd:float ;
+        lab5:name             "Mexico City" ;
+        lab5:name_ascii       "Mexico City" ;
+        lab5:population       "20996000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:mexico_city .
+
+lab5:zhumadian  a             lab5:City , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://dbpedia.org/ontology/City> ;
+        lab5:admin_name       "Henan" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "32.9773"^^xsd:float ;
+        lab5:longitude        "114.0253"^^xsd:float ;
+        lab5:name             "Zhumadian" ;
+        lab5:name_ascii       "Zhumadian" ;
+        lab5:population       "7640000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:zhumadian .
+
+lab5:mexico  a         lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:mexico_city ;
+        lab5:hasCity   lab5:mexico_city ;
+        lab5:iso2code  "MX" ;
+        lab5:iso3code  "MEX" ;
+        lab5:name      "Mexico" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:mexico .
+
+lab5:indonesia  a      lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:jakarta ;
+        lab5:hasCity   lab5:jakarta ;
+        lab5:iso2code  "ID" ;
+        lab5:iso3code  "IDN" ;
+        lab5:name      "Indonesia" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:indonesia .
+
+lab5:nigeria  a               lab5:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , _:b3 ;
+        lab5:hasAdminCapital  lab5:onitsha , lab5:lagos ;
+        lab5:hasCity          lab5:onitsha , lab5:lagos ;
+        lab5:iso2code         "NG" ;
+        lab5:iso3code         "NGA" ;
+        lab5:name             "Nigeria" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:nigeria .
+
+lab5:chile  a          lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:santiago ;
+        lab5:hasCity   lab5:santiago ;
+        lab5:iso2code  "CL" ;
+        lab5:iso3code  "CHL" ;
+        lab5:name      "Chile" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:chile .
+
+lab5:changchun  a              lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Jilin" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "43.9"^^xsd:float ;
+        lab5:longitude         "125.2"^^xsd:float ;
+        lab5:name              "Changchun" ;
+        lab5:name_ascii        "Changchun" ;
+        lab5:population        "7674439"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:changchun .
+
+lab5:changsha  a               lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Hunan" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "28.1987"^^xsd:float ;
+        lab5:longitude         "112.9709"^^xsd:float ;
+        lab5:name              "Changsha" ;
+        lab5:name_ascii        "Changsha" ;
+        lab5:population        "7044118"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:changsha .
+
+lab5:shangrao  a               lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Jiangxi" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "28.4419"^^xsd:float ;
+        lab5:longitude         "117.9633"^^xsd:float ;
+        lab5:name              "Shangrao" ;
+        lab5:name_ascii        "Shangrao" ;
+        lab5:population        "6579714"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:shangrao .
+
+<http://www.semanticweb.org/ernesto/in3067-inm713/lab5/lu'an>
+        a                      lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , lab5:AdminCapitalCity , _:b1 ;
+        lab5:admin_name        "Anhui" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "31.7542"^^xsd:float ;
+        lab5:longitude         "116.5078"^^xsd:float ;
+        lab5:name              "Lu’an" ;
+        lab5:name_ascii        "Lu'an" ;
+        lab5:population        "6090000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.semanticweb.org/ernesto/in3067-inm713/lab5/lu'an> .
+
+lab5:nanning  a                lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Guangxi" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "22.8192"^^xsd:float ;
+        lab5:longitude         "108.315"^^xsd:float ;
+        lab5:name              "Nanning" ;
+        lab5:name_ascii        "Nanning" ;
+        lab5:population        "7153300"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:nanning .
+
+<http://www.semanticweb.org/ernesto/in3067-inm713/lab5/congo_(kinshasa)>
+        a              lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:kinshasa ;
+        lab5:hasCity   lab5:kinshasa ;
+        lab5:iso2code  "CD" ;
+        lab5:iso3code  "COD" ;
+        lab5:name      "Congo (Kinshasa)" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.semanticweb.org/ernesto/in3067-inm713/lab5/congo_(kinshasa)> .
+
+lab5:cairo  a                 lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Al Qāhirah" ;
+        lab5:cityIsLocatedIn  lab5:egypt ;
+        lab5:isCapitalOf      lab5:egypt ;
+        lab5:isLocatedIn      lab5:egypt ;
+        lab5:latitude         "30.0561"^^xsd:float ;
+        lab5:longitude        "31.2394"^^xsd:float ;
+        lab5:name             "Cairo" ;
+        lab5:name_ascii       "Cairo" ;
+        lab5:population       "19372000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:cairo .
+
+lab5:osaka  a                  lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Ōsaka" ;
+        lab5:cityIsLocatedIn   lab5:japan ;
+        lab5:isAdminCapitalOf  lab5:japan ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:japan ;
+        lab5:isLocatedIn       lab5:japan ;
+        lab5:latitude          "34.6936"^^xsd:float ;
+        lab5:longitude         "135.5019"^^xsd:float ;
+        lab5:name              "Ōsaka" ;
+        lab5:name_ascii        "Osaka" ;
+        lab5:population        "14977000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:osaka .
+
+lab5:china  a                 lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:beijing ;
+        lab5:hasAdminCapital  lab5:tianjin , lab5:chongqing , lab5:hangzhou , lab5:changsha , lab5:shanghai , lab5:kunming , lab5:hefei , lab5:nanjing , lab5:nanning , lab5:guangzhou , <http://www.semanticweb.org/ernesto/in3067-inm713/lab5/xi'an> , lab5:wuhan , lab5:chengdu , lab5:zhengzhou , lab5:changchun , lab5:shijiazhuang , lab5:shenyang , lab5:quanzhou , lab5:yancheng , lab5:ganzhou , lab5:nantong , lab5:zhanjiang , lab5:shangrao , lab5:tongshan , lab5:ningbo , lab5:nanchong , lab5:shenzhen , lab5:heze , lab5:foshan , lab5:zhoukou , lab5:dongguan , lab5:maoming , lab5:yichun , <http://www.semanticweb.org/ernesto/in3067-inm713/lab5/lu'an> , lab5:huanggang ;
+        lab5:hasCity          lab5:beijing , lab5:baoding , lab5:xinyang , lab5:shaoyang , lab5:hengyang , lab5:handan , lab5:bijie , lab5:yantai , lab5:luoyang , lab5:nanyang , lab5:tangshan , lab5:linyi , lab5:jining , lab5:weifang , lab5:fuyang , lab5:cangzhou , lab5:zhumadian , lab5:zunyi , lab5:tianjin , lab5:chongqing , lab5:hangzhou , lab5:changsha , lab5:shanghai , lab5:kunming , lab5:hefei , lab5:nanjing , lab5:nanning , lab5:guangzhou , <http://www.semanticweb.org/ernesto/in3067-inm713/lab5/xi'an> , lab5:wuhan , lab5:chengdu , lab5:zhengzhou , lab5:changchun , lab5:shijiazhuang , lab5:shenyang , lab5:quanzhou , lab5:yancheng , lab5:ganzhou , lab5:nantong , lab5:zhanjiang , lab5:shangrao , lab5:tongshan , lab5:ningbo , lab5:nanchong , lab5:shenzhen , lab5:heze , lab5:foshan , lab5:zhoukou , lab5:dongguan , lab5:maoming , lab5:yichun , <http://www.semanticweb.org/ernesto/in3067-inm713/lab5/lu'an> , lab5:huanggang ;
+        lab5:iso2code         "CN" ;
+        lab5:iso3code         "CHN" ;
+        lab5:name             "China" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:china .
+
+lab5:chongqing  a              lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Chongqing" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "29.55"^^xsd:float ;
+        lab5:longitude         "106.5069"^^xsd:float ;
+        lab5:name              "Chongqing" ;
+        lab5:name_ascii        "Chongqing" ;
+        lab5:population        "7739000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:chongqing .
+
+lab5:ahmadabad  a              lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
+        lab5:admin_name        "Gujarāt" ;
+        lab5:cityIsLocatedIn   lab5:india ;
+        lab5:isAdminCapitalOf  lab5:india ;
+        lab5:isLocatedIn       lab5:india ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:india ;
+        lab5:latitude          "23.03"^^xsd:float ;
+        lab5:longitude         "72.58"^^xsd:float ;
+        lab5:name              "Ahmadābād" ;
+        lab5:name_ascii        "Ahmadabad" ;
+        lab5:population        "7410000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:ahmadabad .
+
+lab5:lagos  a                  lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Lagos" ;
+        lab5:cityIsLocatedIn   lab5:nigeria ;
+        lab5:isAdminCapitalOf  lab5:nigeria ;
+        lab5:isLocatedIn       lab5:nigeria ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:nigeria ;
+        lab5:latitude          "6.45"^^xsd:float ;
+        lab5:longitude         "3.4"^^xsd:float ;
+        lab5:name              "Lagos" ;
+        lab5:name_ascii        "Lagos" ;
+        lab5:population        "15279000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:lagos .
+
+lab5:huanggang  a              lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , _:b1 ;
+        lab5:admin_name        "Hubei" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "30.45"^^xsd:float ;
+        lab5:longitude         "114.875"^^xsd:float ;
+        lab5:name              "Huanggang" ;
+        lab5:name_ascii        "Huanggang" ;
+        lab5:population        "6667000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:huanggang .
+
+lab5:zhanjiang  a              lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , lab5:AdminCapitalCity , _:b1 ;
+        lab5:admin_name        "Guangdong" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "21.1967"^^xsd:float ;
+        lab5:longitude         "110.4031"^^xsd:float ;
+        lab5:name              "Zhanjiang" ;
+        lab5:name_ascii        "Zhanjiang" ;
+        lab5:population        "6900000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:zhanjiang .
+
+lab5:united_states  a  lab5:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , _:b3 ;
+        lab5:hasCity   lab5:miami , lab5:chicago , lab5:los_angeles , lab5:new_york ;
+        lab5:iso2code  "US" ;
+        lab5:iso3code  "USA" ;
+        lab5:name      "United States" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:united_states .
+
+lab5:philippines  a    lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:manila ;
+        lab5:hasCity   lab5:manila ;
+        lab5:iso2code  "PH" ;
+        lab5:iso3code  "PHL" ;
+        lab5:name      "Philippines" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:philippines .
+
+lab5:dar_es_salaam  a         lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Dar es Salaam" ;
+        lab5:cityIsLocatedIn  lab5:tanzania ;
+        lab5:isCapitalOf      lab5:tanzania ;
+        lab5:isLocatedIn      lab5:tanzania ;
+        lab5:latitude         "-6.8"^^xsd:float ;
+        lab5:longitude        "39.2833"^^xsd:float ;
+        lab5:name             "Dar es Salaam" ;
+        lab5:name_ascii       "Dar es Salaam" ;
+        lab5:population       "6698000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:dar_es_salaam .
+
+lab5:tokyo  a                 lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Tōkyō" ;
+        lab5:cityIsLocatedIn  lab5:japan ;
+        lab5:isCapitalOf      lab5:japan ;
+        lab5:isLocatedIn      lab5:japan ;
+        lab5:latitude         "35.6897"^^xsd:float ;
+        lab5:longitude        "139.6922"^^xsd:float ;
+        lab5:name             "Tokyo" ;
+        lab5:name_ascii       "Tokyo" ;
+        lab5:population       "37977000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:tokyo .
+
+lab5:bangalore  a              lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Karnātaka" ;
+        lab5:cityIsLocatedIn   lab5:india ;
+        lab5:isAdminCapitalOf  lab5:india ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:india ;
+        lab5:isLocatedIn       lab5:india ;
+        lab5:latitude          "12.9699"^^xsd:float ;
+        lab5:longitude         "77.598"^^xsd:float ;
+        lab5:name              "Bangalore" ;
+        lab5:name_ascii        "Bangalore" ;
+        lab5:population        "13707000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:bangalore .
+
+lab5:tongshan  a               lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , _:b1 ;
+        lab5:admin_name        "Jiangsu" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "34.261"^^xsd:float ;
+        lab5:longitude         "117.1859"^^xsd:float ;
+        lab5:name              "Tongshan" ;
+        lab5:name_ascii        "Tongshan" ;
+        lab5:population        "8669000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:tongshan .
+
+lab5:turkey  a                lab5:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , _:b3 ;
+        lab5:hasAdminCapital  lab5:istanbul ;
+        lab5:hasCity          lab5:istanbul ;
+        lab5:iso2code         "TR" ;
+        lab5:iso3code         "TUR" ;
+        lab5:name             "Turkey" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:turkey .
+
+<http://www.semanticweb.org/ernesto/in3067-inm713/lab5/xi'an>
+        a                      lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Shaanxi" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "34.2667"^^xsd:float ;
+        lab5:longitude         "108.9"^^xsd:float ;
+        lab5:name              "Xi’an" ;
+        lab5:name_ascii        "Xi'an" ;
+        lab5:population        "7135000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.semanticweb.org/ernesto/in3067-inm713/lab5/xi'an> .
+
+lab5:seoul  a                 lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Seoul" ;
+        lab5:cityIsLocatedIn  <http://www.semanticweb.org/ernesto/in3067-inm713/lab5/korea,_south> ;
+        lab5:isCapitalOf      <http://www.semanticweb.org/ernesto/in3067-inm713/lab5/korea,_south> ;
+        lab5:isLocatedIn      <http://www.semanticweb.org/ernesto/in3067-inm713/lab5/korea,_south> ;
+        lab5:latitude         "37.5833"^^xsd:float ;
+        lab5:longitude        "127"^^xsd:float ;
+        lab5:name             "Seoul" ;
+        lab5:name_ascii       "Seoul" ;
+        lab5:population       "21794000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:seoul .
+
+lab5:linyi  a                 lab5:City , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
+        lab5:admin_name       "Shandong" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "35.0606"^^xsd:float ;
+        lab5:longitude        "118.3425"^^xsd:float ;
+        lab5:name             "Linyi" ;
+        lab5:name_ascii       "Linyi" ;
+        lab5:population       "10820000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:linyi .
+
+lab5:hyderabad  a              lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Telangana" ;
+        lab5:cityIsLocatedIn   lab5:india ;
+        lab5:isAdminCapitalOf  lab5:india ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:india ;
+        lab5:isLocatedIn       lab5:india ;
+        lab5:latitude          "17.3667"^^xsd:float ;
+        lab5:longitude         "78.4667"^^xsd:float ;
+        lab5:name              "Hyderābād" ;
+        lab5:name_ascii        "Hyderabad" ;
+        lab5:population        "9746000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:hyderabad .
+
+lab5:manila  a                lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Manila" ;
+        lab5:cityIsLocatedIn  lab5:philippines ;
+        lab5:isCapitalOf      lab5:philippines ;
+        lab5:isLocatedIn      lab5:philippines ;
+        lab5:latitude         "14.5958"^^xsd:float ;
+        lab5:longitude        "120.9772"^^xsd:float ;
+        lab5:name             "Manila" ;
+        lab5:name_ascii       "Manila" ;
+        lab5:population       "23088000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:manila .
+
+lab5:japan  a                 lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:tokyo ;
+        lab5:hasAdminCapital  lab5:nagoya , lab5:osaka ;
+        lab5:hasCity          lab5:tokyo , lab5:nagoya , lab5:osaka ;
+        lab5:iso2code         "JP" ;
+        lab5:iso3code         "JPN" ;
+        lab5:name             "Japan" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:japan .
+
+lab5:thailand  a       lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:bangkok ;
+        lab5:hasCity   lab5:bangkok ;
+        lab5:iso2code  "TH" ;
+        lab5:iso3code  "THA" ;
+        lab5:name      "Thailand" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:thailand .
+
+lab5:yantai  a                lab5:City , _:b1 , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        lab5:admin_name       "Shandong" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "37.3997"^^xsd:float ;
+        lab5:longitude        "121.2664"^^xsd:float ;
+        lab5:name             "Yantai" ;
+        lab5:name_ascii       "Yantai" ;
+        lab5:population       "6516900"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:yantai .
+
+lab5:london  a                <http://www.w3.org/2002/07/owl#NamedIndividual> , lab5:City , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , lab5:CapitalCity ;
+        <http://dbpedia.org/ontology/populationTotal>
+                "10979000"^^xsd:long ;
+        lab5:admin_name       "London, City of" ;
+        lab5:cityIsLocatedIn  lab5:united_kingdom ;
+        lab5:isCapitalOf      lab5:united_kingdom ;
+        lab5:isLocatedIn      lab5:united_kingdom ;
+        lab5:latitude         "51.5072"^^xsd:float ;
+        lab5:longitude        "-0.1275"^^xsd:float ;
+        lab5:name             "London" ;
+        lab5:name_ascii       "London" ;
+        lab5:population       "10979000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:london .
+
+lab5:rio_de_janeiro  a         lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Rio de Janeiro" ;
+        lab5:cityIsLocatedIn   lab5:brazil ;
+        lab5:isAdminCapitalOf  lab5:brazil ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:brazil ;
+        lab5:isLocatedIn       lab5:brazil ;
+        lab5:latitude          "-22.9083"^^xsd:float ;
+        lab5:longitude         "-43.1964"^^xsd:float ;
+        lab5:name              "Rio de Janeiro" ;
+        lab5:name_ascii        "Rio de Janeiro" ;
+        lab5:population        "12272000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:rio_de_janeiro .
+
+lab5:chicago  a               lab5:City , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
+        lab5:admin_name       "Illinois" ;
+        lab5:cityIsLocatedIn  lab5:united_states ;
+        lab5:isLocatedIn      lab5:united_states ;
+        lab5:latitude         "41.8373"^^xsd:float ;
+        lab5:longitude        "-87.6862"^^xsd:float ;
+        lab5:name             "Chicago" ;
+        lab5:name_ascii       "Chicago" ;
+        lab5:population       "8604203"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:chicago .
+
+lab5:zunyi  a                 lab5:City , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> ;
+        lab5:admin_name       "Guizhou" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "27.705"^^xsd:float ;
+        lab5:longitude        "106.9336"^^xsd:float ;
+        lab5:name             "Zunyi" ;
+        lab5:name_ascii       "Zunyi" ;
+        lab5:population       "6127009"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:zunyi .
+
+lab5:india  a                 lab5:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , _:b3 ;
+        lab5:hasAdminCapital  lab5:hyderabad , lab5:chennai , lab5:bangalore , lab5:kolkata , lab5:mumbai , lab5:delhi , lab5:ahmadabad ;
+        lab5:hasCity          lab5:pune , lab5:hyderabad , lab5:chennai , lab5:bangalore , lab5:kolkata , lab5:mumbai , lab5:delhi , lab5:ahmadabad ;
+        lab5:iso2code         "IN" ;
+        lab5:iso3code         "IND" ;
+        lab5:name             "India" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:india .
+
+lab5:ganzhou  a                lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , _:b1 ;
+        lab5:admin_name        "Jiangxi" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "25.8292"^^xsd:float ;
+        lab5:longitude         "114.9336"^^xsd:float ;
+        lab5:name              "Ganzhou" ;
+        lab5:name_ascii        "Ganzhou" ;
+        lab5:population        "8677600"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:ganzhou .
+
+lab5:colombia  a       lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:bogota ;
+        lab5:hasCity   lab5:bogota ;
+        lab5:iso2code  "CO" ;
+        lab5:iso3code  "COL" ;
+        lab5:name      "Colombia" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:colombia .
+
+lab5:zhoukou  a                lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , _:b1 ;
+        lab5:admin_name        "Henan" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "33.625"^^xsd:float ;
+        lab5:longitude         "114.6418"^^xsd:float ;
+        lab5:name              "Zhoukou" ;
+        lab5:name_ascii        "Zhoukou" ;
+        lab5:population        "9901000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:zhoukou .
+
+lab5:hanoi  a                 lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Hà Nội" ;
+        lab5:cityIsLocatedIn  lab5:vietnam ;
+        lab5:isCapitalOf      lab5:vietnam ;
+        lab5:isLocatedIn      lab5:vietnam ;
+        lab5:latitude         "21.0245"^^xsd:float ;
+        lab5:longitude        "105.8412"^^xsd:float ;
+        lab5:name             "Hanoi" ;
+        lab5:name_ascii       "Hanoi" ;
+        lab5:population       "7785000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:hanoi .
+
+lab5:kuala_lumpur  a          lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Kuala Lumpur" ;
+        lab5:cityIsLocatedIn  lab5:malaysia ;
+        lab5:isCapitalOf      lab5:malaysia ;
+        lab5:isLocatedIn      lab5:malaysia ;
+        lab5:latitude         "3.1478"^^xsd:float ;
+        lab5:longitude        "101.6953"^^xsd:float ;
+        lab5:name             "Kuala Lumpur" ;
+        lab5:name_ascii       "Kuala Lumpur" ;
+        lab5:population       "8285000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:kuala_lumpur .
+
+lab5:nagoya  a                 lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Aichi" ;
+        lab5:cityIsLocatedIn   lab5:japan ;
+        lab5:isAdminCapitalOf  lab5:japan ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:japan ;
+        lab5:isLocatedIn       lab5:japan ;
+        lab5:latitude          "35.1167"^^xsd:float ;
+        lab5:longitude         "136.9333"^^xsd:float ;
+        lab5:name              "Nagoya" ;
+        lab5:name_ascii        "Nagoya" ;
+        lab5:population        "9113000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:nagoya .
+
+lab5:lahore  a                 lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Punjab" ;
+        lab5:cityIsLocatedIn   lab5:pakistan ;
+        lab5:isAdminCapitalOf  lab5:pakistan ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:pakistan ;
+        lab5:isLocatedIn       lab5:pakistan ;
+        lab5:latitude          "31.5497"^^xsd:float ;
+        lab5:longitude         "74.3436"^^xsd:float ;
+        lab5:name              "Lahore" ;
+        lab5:name_ascii        "Lahore" ;
+        lab5:population        "11021000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:lahore .
+
+lab5:vietnam  a               lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:hanoi ;
+        lab5:hasAdminCapital  lab5:ho_chi_minh_city ;
+        lab5:hasCity          lab5:hanoi , lab5:ho_chi_minh_city ;
+        lab5:iso2code         "VN" ;
+        lab5:iso3code         "VNM" ;
+        lab5:name             "Vietnam" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:vietnam .
+
+lab5:beijing  a               lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Beijing" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isCapitalOf      lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "39.905"^^xsd:float ;
+        lab5:longitude        "116.3914"^^xsd:float ;
+        lab5:name             "Beijing" ;
+        lab5:name_ascii       "Beijing" ;
+        lab5:population       "19433000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:beijing .
+
+lab5:kunming  a                lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Yunnan" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "25.0433"^^xsd:float ;
+        lab5:longitude         "102.7061"^^xsd:float ;
+        lab5:name              "Kunming" ;
+        lab5:name_ascii        "Kunming" ;
+        lab5:population        "6250000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:kunming .
+
+lab5:united_kingdom  a  <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2002/07/owl#NamedIndividual> , lab5:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 , <http://www.w3.org/2002/07/owl#Thing> ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:london ;
+        lab5:hasCity   lab5:oxford , lab5:london ;
+        lab5:iso2code  "GB" ;
+        lab5:iso3code  "GBR" ;
+        lab5:name      "United Kingdom" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:united_kingdom .
+
+lab5:istanbul  a               lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "İstanbul" ;
+        lab5:cityIsLocatedIn   lab5:turkey ;
+        lab5:isAdminCapitalOf  lab5:turkey ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:turkey ;
+        lab5:isLocatedIn       lab5:turkey ;
+        lab5:latitude          "41.01"^^xsd:float ;
+        lab5:longitude         "28.9603"^^xsd:float ;
+        lab5:name              "Istanbul" ;
+        lab5:name_ascii        "Istanbul" ;
+        lab5:population        "15154000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:istanbul .
+
+lab5:angola  a         lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:luanda ;
+        lab5:hasCity   lab5:luanda ;
+        lab5:iso2code  "AO" ;
+        lab5:iso3code  "AGO" ;
+        lab5:name      "Angola" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:angola .
+
+lab5:baoding  a               lab5:City , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> ;
+        lab5:admin_name       "Hebei" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "38.8671"^^xsd:float ;
+        lab5:longitude        "115.4845"^^xsd:float ;
+        lab5:name             "Baoding" ;
+        lab5:name_ascii       "Baoding" ;
+        lab5:population       "10700000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:baoding .
+
+lab5:hong_kong  a             lab5:City , lab5:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , _:b3 , _:b1 , <http://dbpedia.org/ontology/City> ;
+        lab5:admin_name       "" ;
+        lab5:cityIsLocatedIn  lab5:hong_kong ;
+        lab5:hasCity          lab5:hong_kong ;
+        lab5:isLocatedIn      lab5:hong_kong ;
+        lab5:iso2code         "HK" ;
+        lab5:iso3code         "HKG" ;
+        lab5:latitude         "22.305"^^xsd:float ;
+        lab5:longitude        "114.185"^^xsd:float ;
+        lab5:name             "Hong Kong" ;
+        lab5:name_ascii       "Hong Kong" ;
+        lab5:population       "7347000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:hong_kong .
+
+lab5:mumbai  a                 lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Mahārāshtra" ;
+        lab5:cityIsLocatedIn   lab5:india ;
+        lab5:isAdminCapitalOf  lab5:india ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:india ;
+        lab5:isLocatedIn       lab5:india ;
+        lab5:latitude          "18.9667"^^xsd:float ;
+        lab5:longitude         "72.8333"^^xsd:float ;
+        lab5:name              "Mumbai" ;
+        lab5:name_ascii        "Mumbai" ;
+        lab5:population        "23355000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:mumbai .
+
+lab5:shenyang  a               lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Liaoning" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "41.8039"^^xsd:float ;
+        lab5:longitude         "123.4258"^^xsd:float ;
+        lab5:name              "Shenyang" ;
+        lab5:name_ascii        "Shenyang" ;
+        lab5:population        "7105000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:shenyang .
+
+lab5:tangshan  a              lab5:City , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> ;
+        lab5:admin_name       "Hebei" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "39.6292"^^xsd:float ;
+        lab5:longitude        "118.1742"^^xsd:float ;
+        lab5:name             "Tangshan" ;
+        lab5:name_ascii       "Tangshan" ;
+        lab5:population       "7100000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:tangshan .
+
+lab5:lima  a                  lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Lima" ;
+        lab5:cityIsLocatedIn  lab5:peru ;
+        lab5:isCapitalOf      lab5:peru ;
+        lab5:isLocatedIn      lab5:peru ;
+        lab5:latitude         "-12.05"^^xsd:float ;
+        lab5:longitude        "-77.0333"^^xsd:float ;
+        lab5:name             "Lima" ;
+        lab5:name_ascii       "Lima" ;
+        lab5:population       "9848000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:lima .
+
+lab5:   a       <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://purl.org/dc/elements/1.1/creator>
+                "Ernesto Jimenez-Ruiz" .
+
+lab5:oxford  a                <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
+        <http://dbpedia.org/ontology/populationTotal>
+                "177676"^^xsd:long ;
+        lab5:cityIsLocatedIn  lab5:united_kingdom ;
+        lab5:isLocatedIn      lab5:united_kingdom ;
+        lab5:latitude         "51.751163"^^xsd:float ;
+        lab5:longitude        "-1.2546656"^^xsd:float ;
+        lab5:name             "Oxford" ;
+        lab5:name_ascii       "Oxford" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:oxford .
+
+lab5:new_york  a              lab5:City , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
+        lab5:admin_name       "New York" ;
+        lab5:cityIsLocatedIn  lab5:united_states ;
+        lab5:isLocatedIn      lab5:united_states ;
+        lab5:latitude         "40.6943"^^xsd:float ;
+        lab5:longitude        "-73.9249"^^xsd:float ;
+        lab5:name             "New York" ;
+        lab5:name_ascii       "New York" ;
+        lab5:population       "18713220"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:new_york .
+
+lab5:jining  a                lab5:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> ;
+        lab5:admin_name       "Shandong" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "35.4"^^xsd:float ;
+        lab5:longitude        "116.5667"^^xsd:float ;
+        lab5:name             "Jining" ;
+        lab5:name_ascii       "Jining" ;
+        lab5:population       "8023000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:jining .
+
+lab5:moscow  a                lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Moskva" ;
+        lab5:cityIsLocatedIn  lab5:russia ;
+        lab5:isCapitalOf      lab5:russia ;
+        lab5:isLocatedIn      lab5:russia ;
+        lab5:latitude         "55.7558"^^xsd:float ;
+        lab5:longitude        "37.6178"^^xsd:float ;
+        lab5:name             "Moscow" ;
+        lab5:name_ascii       "Moscow" ;
+        lab5:population       "17125000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:moscow .
+
+lab5:xinyang  a               lab5:City , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        lab5:admin_name       "Henan" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "32.1264"^^xsd:float ;
+        lab5:longitude        "114.0672"^^xsd:float ;
+        lab5:name             "Xinyang" ;
+        lab5:name_ascii       "Xinyang" ;
+        lab5:population       "6634000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:xinyang .
+
+lab5:bogota  a                lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Bogotá" ;
+        lab5:cityIsLocatedIn  lab5:colombia ;
+        lab5:isCapitalOf      lab5:colombia ;
+        lab5:isLocatedIn      lab5:colombia ;
+        lab5:latitude         "4.6126"^^xsd:float ;
+        lab5:longitude        "-74.0705"^^xsd:float ;
+        lab5:name             "Bogotá" ;
+        lab5:name_ascii       "Bogota" ;
+        lab5:population       "9464000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:bogota .
+
+lab5:nanjing  a                lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Jiangsu" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "32.05"^^xsd:float ;
+        lab5:longitude         "118.7667"^^xsd:float ;
+        lab5:name              "Nanjing" ;
+        lab5:name_ascii        "Nanjing" ;
+        lab5:population        "7496000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:nanjing .
+
+lab5:sudan  a          lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:khartoum ;
+        lab5:hasCity   lab5:khartoum ;
+        lab5:iso2code  "SD" ;
+        lab5:iso3code  "SDN" ;
+        lab5:name      "Sudan" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:sudan .
+
+lab5:sao_paulo  a              lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "São Paulo" ;
+        lab5:cityIsLocatedIn   lab5:brazil ;
+        lab5:isAdminCapitalOf  lab5:brazil ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:brazil ;
+        lab5:isLocatedIn       lab5:brazil ;
+        lab5:latitude          "-23.5504"^^xsd:float ;
+        lab5:longitude         "-46.6339"^^xsd:float ;
+        lab5:name              "São Paulo" ;
+        lab5:name_ascii        "Sao Paulo" ;
+        lab5:population        "22046000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:sao_paulo .
+
+lab5:shaoyang  a              lab5:City , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> ;
+        lab5:admin_name       "Hunan" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "27.2418"^^xsd:float ;
+        lab5:longitude        "111.4725"^^xsd:float ;
+        lab5:name             "Shaoyang" ;
+        lab5:name_ascii       "Shaoyang" ;
+        lab5:population       "7071000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:shaoyang .
+
+lab5:weifang  a               lab5:City , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://dbpedia.org/ontology/City> ;
+        lab5:admin_name       "Shandong" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "36.7167"^^xsd:float ;
+        lab5:longitude        "119.1"^^xsd:float ;
+        lab5:name             "Weifang" ;
+        lab5:name_ascii       "Weifang" ;
+        lab5:population       "9373000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:weifang .
+
+lab5:country  a        lab5:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , _:b3 ;
+        lab5:hasCity   lab5:city_ascii ;
+        lab5:iso2code  "iso2" ;
+        lab5:iso3code  "iso3" ;
+        lab5:name      "country" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:country .
+
+lab5:nanyang  a               lab5:City , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
+        lab5:admin_name       "Henan" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "32.9987"^^xsd:float ;
+        lab5:longitude        "112.5292"^^xsd:float ;
+        lab5:name             "Nanyang" ;
+        lab5:name_ascii       "Nanyang" ;
+        lab5:population       "12010000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:nanyang .
+
+lab5:khartoum  a              lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Khartoum" ;
+        lab5:cityIsLocatedIn  lab5:sudan ;
+        lab5:isCapitalOf      lab5:sudan ;
+        lab5:isLocatedIn      lab5:sudan ;
+        lab5:latitude         "15.6031"^^xsd:float ;
+        lab5:longitude        "32.5265"^^xsd:float ;
+        lab5:name             "Khartoum" ;
+        lab5:name_ascii       "Khartoum" ;
+        lab5:population       "7282000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:khartoum .
+
+lab5:onitsha  a                lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
+        lab5:admin_name        "Anambra" ;
+        lab5:cityIsLocatedIn   lab5:nigeria ;
+        lab5:isAdminCapitalOf  lab5:nigeria ;
+        lab5:isLocatedIn       lab5:nigeria ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:nigeria ;
+        lab5:latitude          "6.1667"^^xsd:float ;
+        lab5:longitude         "6.7833"^^xsd:float ;
+        lab5:name              "Onitsha" ;
+        lab5:name_ascii        "Onitsha" ;
+        lab5:population        "7635000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:onitsha .
+
+lab5:delhi  a                  lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Delhi" ;
+        lab5:cityIsLocatedIn   lab5:india ;
+        lab5:isAdminCapitalOf  lab5:india ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:india ;
+        lab5:isLocatedIn       lab5:india ;
+        lab5:latitude          "28.66"^^xsd:float ;
+        lab5:longitude         "77.23"^^xsd:float ;
+        lab5:name              "Delhi" ;
+        lab5:name_ascii        "Delhi" ;
+        lab5:population        "29617000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:delhi .
+
+lab5:buenos_aires  a          lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Buenos Aires, Ciudad Autónoma de" ;
+        lab5:cityIsLocatedIn  lab5:argentina ;
+        lab5:isCapitalOf      lab5:argentina ;
+        lab5:isLocatedIn      lab5:argentina ;
+        lab5:latitude         "-34.5997"^^xsd:float ;
+        lab5:longitude        "-58.3819"^^xsd:float ;
+        lab5:name             "Buenos Aires" ;
+        lab5:name_ascii       "Buenos Aires" ;
+        lab5:population       "16157000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:buenos_aires .
+
+lab5:bangkok  a               lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Krung Thep Maha Nakhon" ;
+        lab5:cityIsLocatedIn  lab5:thailand ;
+        lab5:isCapitalOf      lab5:thailand ;
+        lab5:isLocatedIn      lab5:thailand ;
+        lab5:latitude         "13.75"^^xsd:float ;
+        lab5:longitude        "100.5167"^^xsd:float ;
+        lab5:name             "Bangkok" ;
+        lab5:name_ascii       "Bangkok" ;
+        lab5:population       "17066000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:bangkok .
+
+lab5:bijie  a                 lab5:City , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
+        lab5:admin_name       "Guizhou" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "27.3019"^^xsd:float ;
+        lab5:longitude        "105.2863"^^xsd:float ;
+        lab5:name             "Bijie" ;
+        lab5:name_ascii       "Bijie" ;
+        lab5:population       "6537498"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:bijie .
+
+lab5:tianjin  a                lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Tianjin" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "39.1467"^^xsd:float ;
+        lab5:longitude         "117.2056"^^xsd:float ;
+        lab5:name              "Tianjin" ;
+        lab5:name_ascii        "Tianjin" ;
+        lab5:population        "10800000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:tianjin .
+
+lab5:nantong  a                lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , lab5:AdminCapitalCity , _:b1 ;
+        lab5:admin_name        "Jiangsu" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "31.9829"^^xsd:float ;
+        lab5:longitude         "120.8873"^^xsd:float ;
+        lab5:name              "Nantong" ;
+        lab5:name_ascii        "Nantong" ;
+        lab5:population        "7282835"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:nantong .
+
+lab5:shanghai  a               lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Shanghai" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "31.1667"^^xsd:float ;
+        lab5:longitude         "121.4667"^^xsd:float ;
+        lab5:name              "Shanghai" ;
+        lab5:name_ascii        "Shanghai" ;
+        lab5:population        "22120000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:shanghai .
+
+lab5:russia  a         lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:moscow ;
+        lab5:hasCity   lab5:moscow ;
+        lab5:iso2code  "RU" ;
+        lab5:iso3code  "RUS" ;
+        lab5:name      "Russia" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:russia .
+
+lab5:peru  a           lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:lima ;
+        lab5:hasCity   lab5:lima ;
+        lab5:iso2code  "PE" ;
+        lab5:iso3code  "PER" ;
+        lab5:name      "Peru" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:peru .
+
+lab5:kolkata  a                lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "West Bengal" ;
+        lab5:cityIsLocatedIn   lab5:india ;
+        lab5:isAdminCapitalOf  lab5:india ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:india ;
+        lab5:isLocatedIn       lab5:india ;
+        lab5:latitude          "22.5411"^^xsd:float ;
+        lab5:longitude         "88.3378"^^xsd:float ;
+        lab5:name              "Kolkāta" ;
+        lab5:name_ascii        "Kolkata" ;
+        lab5:population        "17560000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:kolkata .
+
+lab5:shenzhen  a               lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Guangdong" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "22.535"^^xsd:float ;
+        lab5:longitude         "114.054"^^xsd:float ;
+        lab5:name              "Shenzhen" ;
+        lab5:name_ascii        "Shenzhen" ;
+        lab5:population        "15929000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:shenzhen .
+
+lab5:pune  a                  lab5:City , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://dbpedia.org/ontology/City> ;
+        lab5:admin_name       "Mahārāshtra" ;
+        lab5:cityIsLocatedIn  lab5:india ;
+        lab5:isLocatedIn      lab5:india ;
+        lab5:latitude         "18.5196"^^xsd:float ;
+        lab5:longitude        "73.8553"^^xsd:float ;
+        lab5:name             "Pune" ;
+        lab5:name_ascii       "Pune" ;
+        lab5:population       "7764000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:pune .
+
+lab5:shijiazhuang  a           lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Hebei" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "38.0422"^^xsd:float ;
+        lab5:longitude         "114.5086"^^xsd:float ;
+        lab5:name              "Shijiazhuang" ;
+        lab5:name_ascii        "Shijiazhuang" ;
+        lab5:population        "10784600"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:shijiazhuang .
+
+lab5:brazil  a                lab5:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , _:b3 ;
+        lab5:hasAdminCapital  lab5:rio_de_janeiro , lab5:sao_paulo ;
+        lab5:hasCity          lab5:rio_de_janeiro , lab5:sao_paulo ;
+        lab5:iso2code         "BR" ;
+        lab5:iso3code         "BRA" ;
+        lab5:name             "Brazil" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:brazil .
+
+lab5:los_angeles  a           lab5:City , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://dbpedia.org/ontology/City> ;
+        lab5:admin_name       "California" ;
+        lab5:cityIsLocatedIn  lab5:united_states ;
+        lab5:isLocatedIn      lab5:united_states ;
+        lab5:latitude         "34.1139"^^xsd:float ;
+        lab5:longitude        "-118.4068"^^xsd:float ;
+        lab5:name             "Los Angeles" ;
+        lab5:name_ascii       "Los Angeles" ;
+        lab5:population       "12750807"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:los_angeles .
+
+lab5:paris  a                 lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Île-de-France" ;
+        lab5:cityIsLocatedIn  lab5:france ;
+        lab5:isCapitalOf      lab5:france ;
+        lab5:isLocatedIn      lab5:france ;
+        lab5:latitude         "48.8566"^^xsd:float ;
+        lab5:longitude        "2.3522"^^xsd:float ;
+        lab5:name             "Paris" ;
+        lab5:name_ascii       "Paris" ;
+        lab5:population       "11020000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:paris .
+
+lab5:dhaka  a                 lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Dhaka" ;
+        lab5:cityIsLocatedIn  lab5:bangladesh ;
+        lab5:isCapitalOf      lab5:bangladesh ;
+        lab5:isLocatedIn      lab5:bangladesh ;
+        lab5:latitude         "23.7161"^^xsd:float ;
+        lab5:longitude        "90.3961"^^xsd:float ;
+        lab5:name             "Dhaka" ;
+        lab5:name_ascii       "Dhaka" ;
+        lab5:population       "15443000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:dhaka .
+
+lab5:hefei  a                  lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Anhui" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "31.8639"^^xsd:float ;
+        lab5:longitude         "117.2808"^^xsd:float ;
+        lab5:name              "Hefei" ;
+        lab5:name_ascii        "Hefei" ;
+        lab5:population        "7457027"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:hefei .
+
+lab5:luanda  a                lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Luanda" ;
+        lab5:cityIsLocatedIn  lab5:angola ;
+        lab5:isCapitalOf      lab5:angola ;
+        lab5:isLocatedIn      lab5:angola ;
+        lab5:latitude         "-8.8383"^^xsd:float ;
+        lab5:longitude        "13.2344"^^xsd:float ;
+        lab5:name             "Luanda" ;
+        lab5:name_ascii       "Luanda" ;
+        lab5:population       "8417000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:luanda .
+
+lab5:wuhan  a                  lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Hubei" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "30.5872"^^xsd:float ;
+        lab5:longitude         "114.2881"^^xsd:float ;
+        lab5:name              "Wuhan" ;
+        lab5:name_ascii        "Wuhan" ;
+        lab5:population        "8962000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:wuhan .
+
+lab5:handan  a                lab5:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> ;
+        lab5:admin_name       "Hebei" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "36.6116"^^xsd:float ;
+        lab5:longitude        "114.4894"^^xsd:float ;
+        lab5:name             "Handan" ;
+        lab5:name_ascii       "Handan" ;
+        lab5:population       "8499000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:handan .
+
+lab5:pakistan  a              lab5:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , _:b3 ;
+        lab5:hasAdminCapital  lab5:lahore , lab5:karachi ;
+        lab5:hasCity          lab5:lahore , lab5:karachi ;
+        lab5:iso2code         "PK" ;
+        lab5:iso3code         "PAK" ;
+        lab5:name             "Pakistan" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:pakistan .
+
+lab5:argentina  a      lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:buenos_aires ;
+        lab5:hasCity   lab5:buenos_aires ;
+        lab5:iso2code  "AR" ;
+        lab5:iso3code  "ARG" ;
+        lab5:name      "Argentina" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:argentina .
+
+lab5:yichun  a                 lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , _:b1 ;
+        lab5:admin_name        "Jiangxi" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "27.8041"^^xsd:float ;
+        lab5:longitude         "114.383"^^xsd:float ;
+        lab5:name              "Yichun" ;
+        lab5:name_ascii        "Yichun" ;
+        lab5:population        "6048700"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:yichun .
+
+lab5:heze  a                   lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , _:b1 ;
+        lab5:admin_name        "Shandong" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "35.2333"^^xsd:float ;
+        lab5:longitude         "115.4333"^^xsd:float ;
+        lab5:name              "Heze" ;
+        lab5:name_ascii        "Heze" ;
+        lab5:population        "8750000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:heze .
+
+lab5:cangzhou  a              lab5:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> ;
+        lab5:admin_name       "Hebei" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "38.3037"^^xsd:float ;
+        lab5:longitude        "116.8452"^^xsd:float ;
+        lab5:name             "Cangzhou" ;
+        lab5:name_ascii       "Cangzhou" ;
+        lab5:population       "6800000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:cangzhou .
+
+lab5:quanzhou  a               lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , _:b1 ;
+        lab5:admin_name        "Fujian" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "24.9139"^^xsd:float ;
+        lab5:longitude         "118.5858"^^xsd:float ;
+        lab5:name              "Quanzhou" ;
+        lab5:name_ascii        "Quanzhou" ;
+        lab5:population        "6480000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:quanzhou .
+
+lab5:nanchong  a               lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Sichuan" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "30.7991"^^xsd:float ;
+        lab5:longitude         "106.0784"^^xsd:float ;
+        lab5:name              "Nanchong" ;
+        lab5:name_ascii        "Nanchong" ;
+        lab5:population        "6183000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:nanchong .
+
+lab5:saudi_arabia  a   lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:riyadh ;
+        lab5:hasCity   lab5:riyadh ;
+        lab5:iso2code  "SA" ;
+        lab5:iso3code  "SAU" ;
+        lab5:name      "Saudi Arabia" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:saudi_arabia .
+
+lab5:ningbo  a                 lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , _:b1 ;
+        lab5:admin_name        "Zhejiang" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "29.875"^^xsd:float ;
+        lab5:longitude         "121.5492"^^xsd:float ;
+        lab5:name              "Ningbo" ;
+        lab5:name_ascii        "Ningbo" ;
+        lab5:population        "7639000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:ningbo .
+
+lab5:chengdu  a                lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Sichuan" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "30.6636"^^xsd:float ;
+        lab5:longitude         "104.0667"^^xsd:float ;
+        lab5:name              "Chengdu" ;
+        lab5:name_ascii        "Chengdu" ;
+        lab5:population        "11309000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:chengdu .
+
+lab5:kinshasa  a              lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Kinshasa" ;
+        lab5:cityIsLocatedIn  <http://www.semanticweb.org/ernesto/in3067-inm713/lab5/congo_(kinshasa)> ;
+        lab5:isCapitalOf      <http://www.semanticweb.org/ernesto/in3067-inm713/lab5/congo_(kinshasa)> ;
+        lab5:isLocatedIn      <http://www.semanticweb.org/ernesto/in3067-inm713/lab5/congo_(kinshasa)> ;
+        lab5:latitude         "-4.3317"^^xsd:float ;
+        lab5:longitude        "15.3139"^^xsd:float ;
+        lab5:name             "Kinshasa" ;
+        lab5:name_ascii       "Kinshasa" ;
+        lab5:population       "13528000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:kinshasa .
+
+lab5:hangzhou  a               lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Zhejiang" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "30.25"^^xsd:float ;
+        lab5:longitude         "120.1675"^^xsd:float ;
+        lab5:name              "Hangzhou" ;
+        lab5:name_ascii        "Hangzhou" ;
+        lab5:population        "6446000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:hangzhou .
+
+lab5:santiago  a              lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Región Metropolitana" ;
+        lab5:cityIsLocatedIn  lab5:chile ;
+        lab5:isCapitalOf      lab5:chile ;
+        lab5:isLocatedIn      lab5:chile ;
+        lab5:latitude         "-33.45"^^xsd:float ;
+        lab5:longitude        "-70.6667"^^xsd:float ;
+        lab5:name             "Santiago" ;
+        lab5:name_ascii       "Santiago" ;
+        lab5:population       "7007000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:santiago .
+
+lab5:foshan  a                 lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , lab5:AdminCapitalCity , _:b1 ;
+        lab5:admin_name        "Guangdong" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "23.0292"^^xsd:float ;
+        lab5:longitude         "113.1056"^^xsd:float ;
+        lab5:name              "Foshan" ;
+        lab5:name_ascii        "Foshan" ;
+        lab5:population        "7194311"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:foshan .
+
+lab5:dongguan  a               lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , lab5:AdminCapitalCity , _:b1 ;
+        lab5:admin_name        "Guangdong" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "23.0475"^^xsd:float ;
+        lab5:longitude         "113.7493"^^xsd:float ;
+        lab5:name              "Dongguan" ;
+        lab5:name_ascii        "Dongguan" ;
+        lab5:population        "7981000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:dongguan .
+
+lab5:hengyang  a              lab5:City , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://dbpedia.org/ontology/City> ;
+        lab5:admin_name       "Hunan" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "26.8968"^^xsd:float ;
+        lab5:longitude        "112.5857"^^xsd:float ;
+        lab5:name             "Hengyang" ;
+        lab5:name_ascii       "Hengyang" ;
+        lab5:population       "7148344"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:hengyang .
+
+lab5:bangladesh  a     lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:dhaka ;
+        lab5:hasCity   lab5:dhaka ;
+        lab5:iso2code  "BD" ;
+        lab5:iso3code  "BGD" ;
+        lab5:name      "Bangladesh" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:bangladesh .
+
+lab5:riyadh  a                lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Ar Riyāḑ" ;
+        lab5:cityIsLocatedIn  lab5:saudi_arabia ;
+        lab5:isCapitalOf      lab5:saudi_arabia ;
+        lab5:isLocatedIn      lab5:saudi_arabia ;
+        lab5:latitude         "24.65"^^xsd:float ;
+        lab5:longitude        "46.71"^^xsd:float ;
+        lab5:name             "Riyadh" ;
+        lab5:name_ascii       "Riyadh" ;
+        lab5:population       "6881000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:riyadh .
+
+lab5:fuyang  a                lab5:City , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
+        lab5:admin_name       "Anhui" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "32.8986"^^xsd:float ;
+        lab5:longitude        "115.8045"^^xsd:float ;
+        lab5:name             "Fuyang" ;
+        lab5:name_ascii       "Fuyang" ;
+        lab5:population       "8360000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:fuyang .
+
+lab5:maoming  a                lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Guangdong" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "21.6618"^^xsd:float ;
+        lab5:longitude         "110.9178"^^xsd:float ;
+        lab5:name              "Maoming" ;
+        lab5:name_ascii        "Maoming" ;
+        lab5:population        "6706000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:maoming .
+
+lab5:city_ascii  a            lab5:City , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://dbpedia.org/ontology/City> ;
+        lab5:admin_name       "admin_name" ;
+        lab5:cityIsLocatedIn  lab5:country ;
+        lab5:isLocatedIn      lab5:country ;
+        lab5:latitude         "lat"^^xsd:float ;
+        lab5:longitude        "lng"^^xsd:float ;
+        lab5:name             "city" ;
+        lab5:name_ascii       "city_ascii" ;
+        lab5:population       "population"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:city_ascii .
+
+lab5:guangzhou  a              lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Guangdong" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "23.1288"^^xsd:float ;
+        lab5:longitude         "113.259"^^xsd:float ;
+        lab5:name              "Guangzhou" ;
+        lab5:name_ascii        "Guangzhou" ;
+        lab5:population        "20902000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:guangzhou .
+
+lab5:karachi  a                lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab5:AdminCapitalCity , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Sindh" ;
+        lab5:cityIsLocatedIn   lab5:pakistan ;
+        lab5:isAdminCapitalOf  lab5:pakistan ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:pakistan ;
+        lab5:isLocatedIn       lab5:pakistan ;
+        lab5:latitude          "24.86"^^xsd:float ;
+        lab5:longitude         "67.01"^^xsd:float ;
+        lab5:name              "Karachi" ;
+        lab5:name_ascii        "Karachi" ;
+        lab5:population        "14835000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:karachi .
+
+lab5:tehran  a                lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Tehrān" ;
+        lab5:cityIsLocatedIn  lab5:iran ;
+        lab5:isCapitalOf      lab5:iran ;
+        lab5:isLocatedIn      lab5:iran ;
+        lab5:latitude         "35.7"^^xsd:float ;
+        lab5:longitude        "51.4167"^^xsd:float ;
+        lab5:name             "Tehran" ;
+        lab5:name_ascii       "Tehran" ;
+        lab5:population       "13633000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:tehran .
+
+lab5:france  a         lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:paris ;
+        lab5:hasCity   lab5:paris ;
+        lab5:iso2code  "FR" ;
+        lab5:iso3code  "FRA" ;
+        lab5:name      "France" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:france .
+
+lab5:yancheng  a               lab5:City , _:b4 , lab5:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Jiangsu" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:isSecondLevelAdminCapitalOf
+                lab5:china ;
+        lab5:latitude          "33.3936"^^xsd:float ;
+        lab5:longitude         "120.1339"^^xsd:float ;
+        lab5:name              "Yancheng" ;
+        lab5:name_ascii        "Yancheng" ;
+        lab5:population        "7260240"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:yancheng .
+
+<http://www.semanticweb.org/ernesto/in3067-inm713/lab5/korea,_south>
+        a              lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:seoul ;
+        lab5:hasCity   lab5:seoul ;
+        lab5:iso2code  "KR" ;
+        lab5:iso3code  "KOR" ;
+        lab5:name      "Korea, South" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.semanticweb.org/ernesto/in3067-inm713/lab5/korea,_south> .
+
+lab5:ho_chi_minh_city
+        a                      lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Hồ Chí Minh" ;
+        lab5:cityIsLocatedIn   lab5:vietnam ;
+        lab5:isAdminCapitalOf  lab5:vietnam ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:vietnam ;
+        lab5:isLocatedIn       lab5:vietnam ;
+        lab5:latitude          "10.8167"^^xsd:float ;
+        lab5:longitude         "106.6333"^^xsd:float ;
+        lab5:name              "Ho Chi Minh City" ;
+        lab5:name_ascii        "Ho Chi Minh City" ;
+        lab5:population        "13312000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:ho_chi_minh_city .
+
+lab5:tanzania  a       lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:dar_es_salaam ;
+        lab5:hasCity   lab5:dar_es_salaam ;
+        lab5:iso2code  "TZ" ;
+        lab5:iso3code  "TZA" ;
+        lab5:name      "Tanzania" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:tanzania .
+
+lab5:luoyang  a               lab5:City , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://dbpedia.org/ontology/City> ;
+        lab5:admin_name       "Henan" ;
+        lab5:cityIsLocatedIn  lab5:china ;
+        lab5:isLocatedIn      lab5:china ;
+        lab5:latitude         "34.6587"^^xsd:float ;
+        lab5:longitude        "112.4245"^^xsd:float ;
+        lab5:name             "Luoyang" ;
+        lab5:name_ascii       "Luoyang" ;
+        lab5:population       "6549941"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:luoyang .
+
+lab5:malaysia  a       lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:kuala_lumpur ;
+        lab5:hasCity   lab5:kuala_lumpur ;
+        lab5:iso2code  "MY" ;
+        lab5:iso3code  "MYS" ;
+        lab5:name      "Malaysia" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:malaysia .
+
+lab5:iran  a           lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:tehran ;
+        lab5:hasCity   lab5:tehran ;
+        lab5:iso2code  "IR" ;
+        lab5:iso3code  "IRN" ;
+        lab5:name      "Iran" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:iran .
+
+lab5:zhengzhou  a              lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Henan" ;
+        lab5:cityIsLocatedIn   lab5:china ;
+        lab5:isAdminCapitalOf  lab5:china ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:china ;
+        lab5:isLocatedIn       lab5:china ;
+        lab5:latitude          "34.7492"^^xsd:float ;
+        lab5:longitude         "113.6605"^^xsd:float ;
+        lab5:name              "Zhengzhou" ;
+        lab5:name_ascii        "Zhengzhou" ;
+        lab5:population        "7005000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:zhengzhou .
+
+lab5:egypt  a          lab5:Country , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/Country> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 ;
+        <http://dbpedia.org/ontology/capital>
+                lab5:cairo ;
+        lab5:hasCity   lab5:cairo ;
+        lab5:iso2code  "EG" ;
+        lab5:iso3code  "EGY" ;
+        lab5:name      "Egypt" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:egypt .
+
+lab5:chennai  a                lab5:City , _:b2 , lab5:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , lab5:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://dbpedia.org/ontology/City> , _:b1 ;
+        lab5:admin_name        "Tamil Nādu" ;
+        lab5:cityIsLocatedIn   lab5:india ;
+        lab5:isAdminCapitalOf  lab5:india ;
+        lab5:isFirstLevelAdminCapitalOf
+                lab5:india ;
+        lab5:isLocatedIn       lab5:india ;
+        lab5:latitude          "13.0825"^^xsd:float ;
+        lab5:longitude         "80.275"^^xsd:float ;
+        lab5:name              "Chennai" ;
+        lab5:name_ascii        "Chennai" ;
+        lab5:population        "11324000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:chennai .
+
+lab5:miami  a                 lab5:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        lab5:admin_name       "Florida" ;
+        lab5:cityIsLocatedIn  lab5:united_states ;
+        lab5:isLocatedIn      lab5:united_states ;
+        lab5:latitude         "25.7839"^^xsd:float ;
+        lab5:longitude        "-80.2102"^^xsd:float ;
+        lab5:name             "Miami" ;
+        lab5:name_ascii       "Miami" ;
+        lab5:population       "6445545"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:miami .
+
+lab5:jakarta  a               lab5:City , lab5:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://dbpedia.org/ontology/City> , _:b0 , _:b1 ;
+        lab5:admin_name       "Jakarta" ;
+        lab5:cityIsLocatedIn  lab5:indonesia ;
+        lab5:isCapitalOf      lab5:indonesia ;
+        lab5:isLocatedIn      lab5:indonesia ;
+        lab5:latitude         "-6.2146"^^xsd:float ;
+        lab5:longitude        "106.8451"^^xsd:float ;
+        lab5:name             "Jakarta" ;
+        lab5:name_ascii       "Jakarta" ;
+        lab5:population       "34540000"^^xsd:long ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                lab5:jakarta .
+
+<http://www.w3.org/2002/07/owl#AnnotationProperty>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+lab5:Country  a  <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+lab5:City  a    <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://www.w3.org/2002/07/owl#NamedIndividual>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://www.w3.org/2000/01/rdf-schema#Container>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
