@@ -1,0 +1,379 @@
+@prefix :      <http://city.ac.uk/kg/lab7/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+rdfs:domain  a                  rdf:Property , rdfs:Resource ;
+        rdfs:domain             rdf:Property , rdfs:Resource ;
+        rdfs:range              rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf      rdfs:domain ;
+        owl:equivalentProperty  rdfs:domain .
+
+owl:Property  a          rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource .
+
+owl:imports  a       owl:OntologyProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain  owl:Ontology , rdfs:Resource ;
+        rdfs:range   owl:Ontology , rdfs:Resource .
+
+<http://www.w3.org/2001/XMLSchema#negativeInteger>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+owl:intersectionOf  a  rdf:Property , rdfs:Resource ;
+        rdfs:domain  owl:Class , rdfs:Resource , rdfs:Class .
+
+rdfs:comment  a     rdf:Property , rdfs:Resource ;
+        rdfs:range  rdfs:Literal , rdfs:Resource .
+
+owl:backwardCompatibleWith
+        a            rdf:Property , rdfs:Resource ;
+        rdfs:domain  owl:Ontology , rdfs:Resource ;
+        rdfs:range   owl:Ontology , rdfs:Resource .
+
+:Person  a                   rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      owl:Thing , :Person , rdfs:Resource ;
+        owl:equivalentClass  :Person .
+
+owl:Ontology  a          rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource .
+
+<http://www.w3.org/2001/XMLSchema#unsignedLong>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+rdf:first  a                    rdf:Property , owl:FunctionalProperty , rdfs:Resource ;
+        rdfs:domain             rdf:List , rdfs:Resource ;
+        rdfs:subPropertyOf      rdf:first ;
+        owl:equivalentProperty  rdf:first .
+
+owl:onProperty  a    rdf:Property , rdfs:Resource ;
+        rdfs:domain  owl:Restriction , owl:Class , rdfs:Class , rdfs:Resource ;
+        rdfs:range   owl:Property , rdfs:Resource .
+
+owl:differentFrom  a  owl:SymmetricProperty , owl:ObjectProperty , rdf:Property , rdfs:Resource .
+
+rdf:object  a                   rdf:Property , rdfs:Resource ;
+        rdfs:domain             rdf:Statement , rdfs:Resource ;
+        rdfs:subPropertyOf      rdf:object ;
+        owl:equivalentProperty  rdf:object .
+
+rdfs:subPropertyOf  a           rdf:Property , rdfs:Resource ;
+        rdfs:domain             rdf:Property , rdfs:Resource ;
+        rdfs:range              rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf      rdfs:subPropertyOf ;
+        owl:equivalentProperty  rdfs:subPropertyOf .
+
+owl:disjointWith  a  owl:SymmetricProperty , rdf:Property , owl:ObjectProperty , rdfs:Resource ;
+        rdfs:domain  owl:Class , rdfs:Resource , rdfs:Class ;
+        rdfs:range   owl:Class , rdfs:Resource , rdfs:Class .
+
+owl:Class  a                 rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , owl:Class , rdfs:Class ;
+        owl:equivalentClass  owl:Class .
+
+<http://www.w3.org/2001/XMLSchema#duration>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+rdf:List  a              rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource .
+
+rdf:Statement  a         rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource .
+
+:Father  a                   rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      :Parent , :Man , :Father , :Person , owl:Thing , rdfs:Resource ;
+        owl:equivalentClass  :Father .
+
+<http://www.w3.org/2001/XMLSchema#double>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+<http://www.w3.org/2001/XMLSchema#gMonth>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+<http://www.w3.org/2001/XMLSchema#unsignedByte>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+<http://www.w3.org/2001/XMLSchema#gMonthDay>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+:hasFather  a                   rdf:Property , owl:ObjectProperty , rdfs:Resource ;
+        rdfs:domain             owl:Thing , :Person , rdfs:Resource ;
+        rdfs:range              owl:Thing , :Father , :Parent , rdfs:Resource , :Person , :Man ;
+        rdfs:subPropertyOf      :hasParent , :hasFather ;
+        owl:equivalentProperty  :hasFather .
+
+owl:inverseOf  a                rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf      owl:inverseOf ;
+        owl:equivalentProperty  owl:inverseOf .
+
+rdf:Property  a              rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , rdf:Property ;
+        owl:equivalentClass  rdf:Property .
+
+<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+owl:sameAs  a   owl:SymmetricProperty , owl:ObjectProperty , rdf:Property , rdfs:Resource .
+
+rdf:XMLLiteral  a  rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+<http://www.w3.org/2001/XMLSchema#unsignedShort>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+<http://www.w3.org/2001/XMLSchema#gDay>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+rdf:nil  a      rdf:List , rdfs:Resource .
+
+rdfs:range  a                   rdf:Property , rdfs:Resource ;
+        rdfs:domain             rdf:Property , rdfs:Resource ;
+        rdfs:range              rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf      rdfs:range ;
+        owl:equivalentProperty  rdfs:range .
+
+rdfs:isDefinedBy  a             rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf      rdfs:isDefinedBy , rdfs:seeAlso ;
+        owl:equivalentProperty  rdfs:isDefinedBy .
+
+<http://www.w3.org/2001/XMLSchema#boolean>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+owl:Nothing  a               owl:Class , rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf      :Father , :Man , :Mother , :Woman , :Person , owl:Thing , owl:Nothing , :Parent , rdfs:Resource ;
+        owl:equivalentClass  owl:Nothing .
+
+<http://www.w3.org/2001/XMLSchema#hexBinary>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+owl:oneOf  a         rdf:Property , rdfs:Resource ;
+        rdfs:domain  owl:Class , rdfs:Resource , rdfs:Class .
+
+:hasChild  a           owl:ObjectProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain    :Parent , owl:Thing , :Person , rdfs:Resource ;
+        rdfs:range     :Person , owl:Thing , rdfs:Resource ;
+        owl:inverseOf  :hasParent .
+
+<http://www.w3.org/2001/XMLSchema#decimal>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+rdfs:label  a       rdf:Property , rdfs:Resource ;
+        rdfs:range  rdfs:Literal , rdfs:Resource .
+
+<http://www.w3.org/2001/XMLSchema#dateTime>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+<http://www.w3.org/2001/XMLSchema#date>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+<http://www.w3.org/2001/XMLSchema#int>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+rdf:predicate  a                rdf:Property , rdfs:Resource ;
+        rdfs:domain             rdf:Statement , rdfs:Resource ;
+        rdfs:subPropertyOf      rdf:predicate ;
+        owl:equivalentProperty  rdf:predicate .
+
+<http://www.w3.org/2001/XMLSchema#gYear>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+owl:Thing  a                 rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , owl:Thing ;
+        owl:equivalentClass  owl:Thing .
+
+owl:incompatibleWith  a  rdf:Property , rdfs:Resource ;
+        rdfs:domain  owl:Ontology , rdfs:Resource ;
+        rdfs:range   owl:Ontology , rdfs:Resource .
+
+owl:priorVersion  a  rdf:Property , rdfs:Resource ;
+        rdfs:domain  owl:Ontology , rdfs:Resource ;
+        rdfs:range   owl:Ontology , rdfs:Resource .
+
+rdfs:subClassOf  a              rdf:Property , rdfs:Resource ;
+        rdfs:domain             rdfs:Class , rdfs:Resource ;
+        rdfs:range              rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf      rdfs:subClassOf ;
+        owl:equivalentProperty  rdfs:subClassOf .
+
+rdfs:Resource  a             rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource ;
+        owl:equivalentClass  rdfs:Resource .
+
+rdf:rest  a                     rdf:Property , owl:FunctionalProperty , rdfs:Resource ;
+        rdfs:domain             rdf:List , rdfs:Resource ;
+        rdfs:range              rdf:List , rdfs:Resource ;
+        rdfs:subPropertyOf      rdf:rest ;
+        owl:equivalentProperty  rdf:rest .
+
+owl:equivalentClass  a  rdf:Property , rdfs:Resource ;
+        rdfs:domain  owl:Class , rdfs:Resource , rdfs:Class ;
+        rdfs:range   owl:Class , rdfs:Resource , rdfs:Class .
+
+<http://www.w3.org/2001/XMLSchema#short>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+<http://www.w3.org/2001/XMLSchema#positiveInteger>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+rdf:type  a                     rdf:Property , rdfs:Resource ;
+        rdfs:range              rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf      rdf:type ;
+        owl:equivalentProperty  rdf:type .
+
+rdfs:Class  a                rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , rdfs:Class ;
+        owl:equivalentClass  rdfs:Class .
+
+owl:versionInfo  a  owl:AnnotationProperty .
+
+owl:equivalentProperty
+        a                       rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf      owl:equivalentProperty ;
+        owl:equivalentProperty  owl:equivalentProperty .
+
+<http://www.w3.org/2001/XMLSchema#anyURI>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+:Mother  a                   rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , :Parent , :Woman , :Mother , :Person , owl:Thing ;
+        owl:equivalentClass  :Mother .
+
+<http://www.w3.org/2001/XMLSchema#long>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+<http://www.w3.org/2001/XMLSchema#base64Binary>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+:hasMother  a                   rdf:Property , owl:ObjectProperty , rdfs:Resource ;
+        rdfs:domain             owl:Thing , :Person , rdfs:Resource ;
+        rdfs:range              owl:Thing , :Mother , :Parent , rdfs:Resource , :Person , :Woman ;
+        rdfs:subPropertyOf      :hasParent , :hasMother ;
+        owl:equivalentProperty  :hasMother .
+
+<http://www.w3.org/2001/XMLSchema#unsignedInt>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+<http://www.w3.org/2001/XMLSchema#integer>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+rdf:subject  a                  rdf:Property , rdfs:Resource ;
+        rdfs:domain             rdf:Statement , rdfs:Resource ;
+        rdfs:subPropertyOf      rdf:subject ;
+        owl:equivalentProperty  rdf:subject .
+
+<http://www.w3.org/2001/XMLSchema#byte>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+<http://www.w3.org/2001/XMLSchema#time>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+rdfs:seeAlso  a                 rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf      rdfs:seeAlso ;
+        owl:equivalentProperty  rdfs:seeAlso .
+
+<http://www.w3.org/2001/XMLSchema#float>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+rdfs:Literal  a          rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource .
+
+:Parent  a                   rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      :Person , :Parent , owl:Thing , rdfs:Resource ;
+        owl:equivalentClass  :Parent .
+
+owl:Restriction  a           rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      owl:Restriction , owl:Class , rdfs:Class ;
+        owl:equivalentClass  owl:Restriction .
+
+<http://www.w3.org/2001/XMLSchema#nonPositiveInteger>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+:hasParent  a                   owl:ObjectProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain             owl:Thing , :Person , rdfs:Resource ;
+        rdfs:range              owl:Thing , :Parent , rdfs:Resource , :Person ;
+        rdfs:subPropertyOf      :hasParent ;
+        owl:equivalentProperty  :hasParent ;
+        owl:inverseOf           :hasChild .
+
+<http://www.w3.org/2001/XMLSchema#gYearMonth>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+<http://www.w3.org/2001/XMLSchema#string>
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+:Ann    a           :Person , owl:Thing , rdfs:Resource ;
+        :hasFather  :Carl ;
+        :hasMother  :Juliet ;
+        :hasParent  :Juliet , :Carl .
+
+:Man    a                    owl:Class , rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf      :Person , :Man , owl:Thing , rdfs:Resource ;
+        owl:equivalentClass  :Man .
+
+:Woman  a                    owl:Class , rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf      :Person , :Woman , owl:Thing , rdfs:Resource ;
+        owl:equivalentClass  :Woman .
+
+owl:SymmetricProperty
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      owl:SymmetricProperty , owl:ObjectProperty , rdf:Property ;
+        owl:equivalentClass  owl:SymmetricProperty .
+
+owl:InverseFunctionalProperty
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      owl:InverseFunctionalProperty , owl:ObjectProperty , rdf:Property ;
+        owl:equivalentClass  owl:InverseFunctionalProperty .
+
+owl:TransitiveProperty
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      owl:TransitiveProperty , owl:ObjectProperty , rdf:Property ;
+        owl:equivalentClass  owl:TransitiveProperty .
+
+rdfs:Container  a            rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Container ;
+        owl:equivalentClass  rdfs:Container .
+
+rdf:Seq  a                   rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdf:Seq , rdfs:Container ;
+        owl:equivalentClass  rdf:Seq .
+
+owl:FunctionalProperty
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      owl:FunctionalProperty , rdf:Property ;
+        owl:equivalentClass  owl:FunctionalProperty .
+
+owl:DatatypeProperty  a      rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      owl:DatatypeProperty , rdf:Property ;
+        owl:equivalentClass  owl:DatatypeProperty .
+
+rdfs:ContainerMembershipProperty
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:ContainerMembershipProperty , rdf:Property ;
+        owl:equivalentClass  rdfs:ContainerMembershipProperty .
+
+owl:OntologyProperty  a      rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      owl:OntologyProperty , rdf:Property ;
+        owl:equivalentClass  owl:OntologyProperty .
+
+rdf:Bag  a                   rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdf:Bag , rdfs:Container ;
+        owl:equivalentClass  rdf:Bag .
+
+rdfs:Datatype  a             rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Datatype , rdfs:Class ;
+        owl:equivalentClass  rdfs:Datatype .
+
+rdf:Alt  a                   rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdf:Alt , rdfs:Container ;
+        owl:equivalentClass  rdf:Alt .
+
+owl:ObjectProperty  a        rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      owl:ObjectProperty , rdf:Property ;
+        owl:equivalentClass  owl:ObjectProperty .
+
+:Juliet  a         :Mother , owl:Thing , :Parent , rdfs:Resource , :Woman , :Person ;
+        :hasChild  :Ann .
+
+:Carl   a          :Father , owl:Thing , :Parent , :Man , :Person , rdfs:Resource ;
+        :hasChild  :Ann .
+
+owl:AnnotationProperty
+        a       rdfs:Class , rdfs:Resource .
