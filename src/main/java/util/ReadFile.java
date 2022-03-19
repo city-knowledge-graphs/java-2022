@@ -31,6 +31,8 @@ import java.io.InputStream;
 
 /**
  * This program reads a text file line by line, using a BufferedReader
+ * To be updated to new java versions: 
+ * https://howtodoinjava.com/java/io/java-read-file-to-string-examples/
  * 
  */
 public class ReadFile  {
@@ -117,6 +119,17 @@ public class ReadFile  {
 	}
 	
 	
-
-		
+	
+	 
+    public String readFileIntoString() {
+        StringBuilder contentBuilder = new StringBuilder();
+                
+        String sCurrentLine;
+        while ((sCurrentLine = readLine()) != null){        	
+                contentBuilder.append(sCurrentLine).append("\n");
+        }
+        
+        return contentBuilder.toString();
+    }
+    
 }
