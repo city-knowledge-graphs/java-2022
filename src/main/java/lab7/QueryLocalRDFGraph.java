@@ -23,25 +23,29 @@ import org.apache.jena.riot.RDFLanguages;
 import util.ReadFile;
 
 
-
-
 public class QueryLocalRDFGraph {
 	
 	protected enum JenaReasoner {MICRO, MINI}
 
 	
-	public QueryLocalRDFGraph(String file, Lang format, String query_file) throws FileNotFoundException {
-	
+	public QueryLocalRDFGraph(String file_onto, String file_data, String query_file) throws FileNotFoundException {
+		//Lang format, Not required
 		
-		Dataset dataset = RDFDataMgr.loadDataset(file, format);
+		//Load data
+		Dataset dataset = RDFDataMgr.loadDataset(file_data);//, format);
 		Model model = dataset.getDefaultModel();
 		
+		//Load ontology if any....
+		if (file_onto!=null) {
+	        Dataset dataset_onto = RDFDataMgr.loadDataset(file_onto);
+	        model.add(dataset_onto.getDefaultModel().listStatements().toList());
+		}		
 		System.out.println("The input graph contains '" + model.listStatements().toSet().size() + "' triples.");
 
-    
+		
 	    //Do reasoning
 	    Reasoner reasoner;
-	    JenaReasoner jenaReasoner=JenaReasoner.MINI;
+	    JenaReasoner jenaReasoner=JenaReasoner.MICRO;
 	    
 		if (jenaReasoner==JenaReasoner.MINI)
 			reasoner = ReasonerRegistry.getOWLMiniReasoner();		//Approximate reasoner close to OWL 2 RL (but not exactly)
@@ -95,18 +99,37 @@ public class QueryLocalRDFGraph {
 	public static void main(String[] args) {
 		String dataset;
 		String query_file;
+		String ontology_file = null;
 		
+		//Playground
 		dataset = "files/playground.ttl"; 
-		query_file = "files/lab7/query_playground.txt";
+		query_file = "files/lab7/query_playground.txt";		
+		//query_file = "files/lab7/solution/query7.1_playground.txt";
+		//query_file = "files/lab7/solution/query7.2_playground.txt";
+		//query_file = "files/lab7/solution/query7.3_playground.txt";
 		
-		query_file = "files/lab7/solution/query7.1.txt";
-		query_file = "files/lab7/solution/query7.2.txt";
-		//query_file = "files/lab7/solution/query7.3.txt";
+		
+		//World cities
+		dataset = "files/worldcities-free-100-task2.ttl";
+		ontology_file = "files/ontology_lab5.ttl";
+		query_file = "files/lab7/query_world-cities.txt";
+		//query_file = "files/lab7/solution/query7.4_world-cities.txt"; 
+
+		
+		//Nobel prize		
+		ontology_file = "files/nobel-prize-ontology.rdf";
+		dataset= "files/nobelprize_kg.nt";
+		query_file = "files/lab7/query_nobel-prize.txt";
+		query_file = "files/lab7/query_nobel-prize-service.txt";
+		//query_file = "files/lab7/solution/query7.5_nobel-prize.txt";
+		//query_file = "files/lab7/solution/query7.6_nobel-prize.txt";
+		
+		
 		
 		
 		try {
 			
-			new QueryLocalRDFGraph(dataset, RDFLanguages.TURTLE, query_file);
+			new QueryLocalRDFGraph(ontology_file, dataset, query_file);
 			
 		} 
 		catch (FileNotFoundException e) {

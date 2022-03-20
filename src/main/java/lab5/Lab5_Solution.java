@@ -456,7 +456,7 @@ public class Lab5_Solution {
     
     public void performSPARQLQueryLab7(Model model) {
     	    
-    	//Using the generated RDF graph from the World Cities dataset (lab session6), 
+    	//Using the generated RDF graph from the World Cities dataset (lab session 5), 
     	//create a SPARQL query that counts the cities in each country.  
     	//Order by number of cities. Test it programmatically.
        String queryStr = 
