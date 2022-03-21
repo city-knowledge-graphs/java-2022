@@ -137,11 +137,12 @@ public class GraphdbCommunication {
 				path_to_data_file = "files/lab7/named_graphs.ttl";
 				
 					    
-				query_file="files/lab7/query_named_default.txt";
+				query_file="files/lab7/query_named_simple.txt";
 				query_file="files/lab7/query_named1.txt";
 				query_file="files/lab7/query_named2.txt";
 				query_file="files/lab7/query_named_all.txt";
-				query_file="files/lab7/query_named_from.txt";    
+				query_file="files/lab7/query_named_from.txt";
+				
 					    
 				ReadFile qfile = new ReadFile(query_file);		
 				queryStr = qfile.readFileIntoString();
