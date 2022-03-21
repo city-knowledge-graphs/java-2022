@@ -101,29 +101,36 @@ public class QueryLocalRDFGraph {
 		String query_file;
 		String ontology_file = null;
 		
-		//Playground
-		dataset = "files/playground.ttl"; 
-		query_file = "files/lab7/query_playground.txt";		
-		//query_file = "files/lab7/solution/query7.1_playground.txt";
-		//query_file = "files/lab7/solution/query7.2_playground.txt";
-		//query_file = "files/lab7/solution/query7.3_playground.txt";
+		String test;
+		test="playground";
+		test="world-cities";
+		test="nobel-prizes"; 
 		
-		
-		//World cities
-		dataset = "files/worldcities-free-100-task2.ttl";
-		ontology_file = "files/ontology_lab5.ttl";
-		query_file = "files/lab7/query_world-cities.txt";
-		//query_file = "files/lab7/solution/query7.4_world-cities.txt"; 
-
-		
-		//Nobel prize		
-		ontology_file = "files/nobel-prize-ontology.rdf";
-		dataset= "files/nobelprize_kg.nt";
-		query_file = "files/lab7/query_nobel-prize.txt";
-		query_file = "files/lab7/query_nobel-prize-service.txt";
-		//query_file = "files/lab7/solution/query7.5_nobel-prize.txt";
-		//query_file = "files/lab7/solution/query7.6_nobel-prize.txt";
-		
+		if (test.equals("playground")) {
+			//Playground
+			dataset = "files/playground.ttl"; 
+			query_file = "files/lab7/query_playground.txt";		
+			//query_file = "files/lab7/solution/query7.1_playground.txt";
+			//query_file = "files/lab7/solution/query7.2_playground.txt";
+			//query_file = "files/lab7/solution/query7.3_playground.txt";
+		}
+		else if (test.equals("world-cities")) {
+			
+			//World cities
+			dataset = "files/worldcities-free-100-task2.ttl";
+			ontology_file = "files/ontology_lab5.ttl";
+			query_file = "files/lab7/query_world-cities.txt";
+			//query_file = "files/lab7/solution/query7.4_world-cities.txt"; 
+		}
+		else {
+			//Nobel prize		
+			ontology_file = "files/nobel-prize-ontology.rdf";
+			dataset= "files/nobelprize_kg.nt";
+			query_file = "files/lab7/query_nobel-prize.txt";
+			query_file = "files/lab7/query_nobel-prize-service.txt";
+			//query_file = "files/lab7/solution/query7.5_nobel-prize.txt";
+			//query_file = "files/lab7/solution/query7.6_nobel-prize.txt";
+		}		
 		
 		
 		
