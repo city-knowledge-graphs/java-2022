@@ -67,6 +67,5 @@ public class CompareWithReference {
 	public static void main(String[] args) {
 		new CompareWithReference("files/lab8/anatomy-reference.ttl", "files/lab8/anatomy-example-system.ttl");
 	}
-	
-	
+		
 }

@@ -88,8 +88,7 @@ public class AccessEntityLabels {
 		//onto_file = "files/lab8/ekaw.owl";
 		//onto_file = "files/lab8/mouse.owl";
 		//onto_file = "files/lab8/human.owl";
-		
-					
+							
 		try {
 		
 			access.loadOntologyFromLocalFile(onto_file);
