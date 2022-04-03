@@ -8,6 +8,7 @@
 - **Laboratory 6**: Reasoning with RDFS Semantics and OWL 2 RL
 - **Laboratory 7**: SPARQL 1.1 and GraphDB
 - **Laboratory 8**: Ontology Alignment
+- **Laboratory 9**: Ontology Embeddings
 
 
 ### Dependencies
